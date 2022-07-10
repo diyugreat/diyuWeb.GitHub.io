@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
   <head>
     <link rel="stylesheet" href="./CSS/index.css" />
     <script
@@ -8,6 +8,8 @@
 /jquery/1.4.0/jquery.min.js"
     ></script>
     <script src="./js/love_click.js"></script>
+    <script src="./js/index1.js"></script>
+    <script src="./js/index2.js"></script>
   </head>
   <body>
     
@@ -37,6 +39,7 @@
           <a href="./about.html"><span>About</span></a>
           <a href="./form.html"><span>Form</span></a>
           <a href="./star_sky.html"><span>Sky</span></a>
+          <a href="./report.html"><span>Report</span></a>
           <a href="https://blog.csdn.net/qq_45945548" target="_blank"><span>Blog</span></a>
         </div>
 
@@ -92,26 +95,20 @@
       </audio>
       <img id="music_img" src="./images/music.jpg" alt="" />
     </div>
-    <script>
-      // 点击按钮，页面下滑
-      jQuery(document).ready(function ($) {
-        $(".scroll").click(function (event) {
-          event.preventDefault();
-          $("html,body").animate({ scrollTop: $(this.hash).offset().top }, 400);
-        });
-      });
 
-      //定义一个函数，当用户单击的时候触发这个函数，从而实现音乐的暂停与播放。
-      let music = document.getElementById("music");
-      let music_img = document.getElementById("music_img");
-      music_img.onclick = function () {
-        if (music.paused) {
-          music.play();
-        } else {
-          music.pause();
-        }
-      };
-    </script>
 
   </body>
+
+<script>
+    //定义一个函数，当用户单击的时候触发这个函数，从而实现音乐的暂停与播放。
+let music = document.getElementById("music");
+let music_img = document.getElementById("music_img");
+music_img.onclick = function () {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+};
+</script>
 </html>
